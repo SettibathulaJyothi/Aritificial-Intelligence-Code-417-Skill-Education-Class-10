@@ -9,3 +9,5 @@ teachable machine: https://teachablemachine.withgoogle.com/
 tixtactoe:https://playtictactoe.org/
 
 image generator :https://dream.ai/create
+
+Image Feature:https://setosa.io/ev/image-kernels/
