@@ -1,0 +1,1744 @@
+/* =========================================================
+   EASY FONT EDITING
+   Change ONLY these variables to change the whole website.
+   ========================================================= */
+
+:root {
+
+    /* ---------- FONT FAMILY ---------- */
+
+    --font-main: "Poppins", "Segoe UI", Arial, sans-serif;
+    --font-heading: "Poppins", "Segoe UI", Arial, sans-serif;
+
+
+    /* ---------- FONT SIZES ---------- */
+
+    --font-body: 16px;
+    --font-small: 13px;
+    --font-medium: 17px;
+
+    --font-h1: 52px;
+    --font-h2: 38px;
+    --font-h3: 23px;
+    --font-h4: 20px;
+
+    --font-hero: 21px;
+
+
+    /* ---------- COLORS ---------- */
+
+    --primary: #6c63ff;
+    --secondary: #00c6ff;
+
+    --dark: #10142c;
+    --text: #28304d;
+    --muted: #68708d;
+
+    --white: #ffffff;
+    --light: #f5f7ff;
+
+    --green: #20b486;
+    --orange: #ff9f43;
+    --red: #ff5c7a;
+
+
+    /* ---------- DESIGN ---------- */
+
+    --radius: 22px;
+
+    --shadow:
+        0 15px 40px rgba(44, 51, 100, 0.12);
+
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: var(--font-main);
+
+    font-size: var(--font-body);
+
+    color: var(--text);
+
+    background:
+        radial-gradient(circle at top left,
+        rgba(108, 99, 255, 0.10),
+        transparent 35%),
+
+        radial-gradient(circle at bottom right,
+        rgba(0, 198, 255, 0.08),
+        transparent 35%),
+
+        var(--light);
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.top-header {
+
+    background: linear-gradient(
+        135deg,
+        #171b3b,
+        #28235d,
+        #153d62
+    );
+
+    color: white;
+
+    padding: 25px 7%;
+
+}
+
+
+.header-content {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.course-badge {
+
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.12);
+
+    font-size: var(--font-small);
+
+    letter-spacing: 1px;
+
+}
+
+
+.top-header h1 {
+
+    font-size: 34px;
+
+    margin-top: 8px;
+
+}
+
+
+.top-header p {
+
+    opacity: 0.8;
+
+}
+
+
+.progress-box {
+
+    width: 240px;
+
+}
+
+
+.progress-box span {
+
+    font-size: var(--font-small);
+
+}
+
+
+.progress-bar {
+
+    height: 9px;
+
+    margin: 7px 0;
+
+    background: rgba(255,255,255,0.15);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+#progressFill {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #00d4ff,
+        #7c6cff
+    );
+
+    transition: width 0.6s ease;
+
+}
+
+
+#progressText {
+
+    font-size: var(--font-small);
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 460px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(108,99,255,.95),
+            rgba(0,198,255,.85)
+        );
+
+    color: white;
+
+}
+
+
+.hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+
+    height: 500px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(255,255,255,.12);
+
+    animation: rotateCircle 20s linear infinite;
+
+}
+
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    border: 2px dashed rgba(255,255,255,.12);
+
+    animation: rotateCircle 12s linear infinite reverse;
+
+}
+
+
+@keyframes rotateCircle {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+.hero-content {
+
+    max-width: 850px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.lesson-label {
+
+    display: inline-block;
+
+    background: rgba(255,255,255,.16);
+
+    padding: 7px 18px;
+
+    border-radius: 30px;
+
+    letter-spacing: 2px;
+
+    font-size: var(--font-small);
+
+}
+
+
+.hero h2 {
+
+    font-size: var(--font-h1);
+
+    line-height: 1.15;
+
+    margin: 20px 0;
+
+}
+
+
+.hero h2 span {
+
+    display: block;
+
+    color: #fff3a8;
+
+}
+
+
+.hero p {
+
+    font-size: var(--font-hero);
+
+    max-width: 720px;
+
+    margin: auto;
+
+    opacity: .92;
+
+}
+
+
+.start-btn {
+
+    border: none;
+
+    margin-top: 30px;
+
+    padding: 15px 28px;
+
+    border-radius: 50px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    background: white;
+
+    color: #5147d9;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+
+    transition: .3s;
+
+}
+
+
+.start-btn:hover {
+
+    transform: translateY(-5px) scale(1.03);
+
+}
+
+
+.floating-icon {
+
+    position: absolute;
+
+    font-size: 45px;
+
+    animation: floating 4s ease-in-out infinite;
+
+    opacity: .85;
+
+}
+
+
+.icon1 {
+
+    left: 8%;
+
+    top: 20%;
+
+}
+
+
+.icon2 {
+
+    right: 12%;
+
+    top: 30%;
+
+    animation-delay: 1s;
+
+}
+
+
+.icon3 {
+
+    left: 15%;
+
+    bottom: 15%;
+
+    animation-delay: 2s;
+
+}
+
+
+@keyframes floating {
+
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.container {
+
+    width: min(1100px, 92%);
+
+    margin: 70px auto;
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.section-heading > span {
+
+    color: var(--primary);
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    font-size: var(--font-small);
+
+}
+
+
+.section-heading h2 {
+
+    font-size: var(--font-h2);
+
+    color: var(--dark);
+
+    margin: 8px 0;
+
+}
+
+
+.section-heading p {
+
+    color: var(--muted);
+
+}
+
+
+/* =========================================================
+   TOPIC CARD
+   ========================================================= */
+
+.topic-card {
+
+    background: rgba(255,255,255,.95);
+
+    border-radius: var(--radius);
+
+    margin-bottom: 22px;
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+
+    border: 1px solid rgba(108,99,255,.08);
+
+    transition: .3s;
+
+}
+
+
+.topic-card:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+.topic-header {
+
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+}
+
+
+.topic-number {
+
+    width: 55px;
+
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    color: white;
+
+    font-weight: bold;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+
+.topic-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex: 1;
+
+}
+
+
+.topic-icon {
+
+    font-size: 32px;
+
+}
+
+
+.topic-title h3 {
+
+    font-size: var(--font-h3);
+
+    color: var(--dark);
+
+}
+
+
+.topic-title p {
+
+    color: var(--muted);
+
+    font-size: var(--font-small);
+
+}
+
+
+.arrow {
+
+    font-size: 30px;
+
+    color: var(--primary);
+
+    transition: transform .4s ease;
+
+}
+
+
+.topic-card.active .arrow {
+
+    transform: rotate(180deg);
+
+}
+
+
+/* =========================================================
+   ANIMATED CONTENT
+   ========================================================= */
+
+.topic-content {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    padding: 0 30px;
+
+    transition:
+        max-height .75s cubic-bezier(.4,0,.2,1),
+        opacity .4s ease,
+        padding .5s ease;
+
+}
+
+
+.topic-card.active .topic-content {
+
+    max-height: 5000px;
+
+    opacity: 1;
+
+    padding: 5px 30px 35px;
+
+    animation: contentReveal .6s ease;
+
+}
+
+
+@keyframes contentReveal {
+
+    from {
+
+        transform: translateY(-15px);
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+/* =========================================================
+   CONTENT BOXES
+   ========================================================= */
+
+.intro-box {
+
+    background: linear-gradient(
+        135deg,
+        #eef0ff,
+        #e8f9ff
+    );
+
+    border-left: 5px solid var(--primary);
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.learning-card {
+
+    padding: 22px;
+
+    margin: 18px 0;
+
+    border-radius: 18px;
+
+    background: #fafbff;
+
+    border: 1px solid #e7e9f5;
+
+    transition: .3s;
+
+}
+
+
+.learning-card:hover {
+
+    transform: translateX(5px);
+
+    box-shadow: 0 8px 25px rgba(70,70,120,.08);
+
+}
+
+
+.learning-card h4 {
+
+    font-size: var(--font-h4);
+
+    color: var(--primary);
+
+    margin-bottom: 8px;
+
+}
+
+
+.example {
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    background: #fff7e8;
+
+    border-radius: 12px;
+
+    border-left: 4px solid var(--orange);
+
+}
+
+
+/* =========================================================
+   PROBLEM SCOPING
+   ========================================================= */
+
+.question-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+}
+
+
+.question-grid div {
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    background: white;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.06);
+
+}
+
+
+.question-grid strong {
+
+    color: var(--primary);
+
+}
+
+
+.question-grid p {
+
+    font-size: var(--font-small);
+
+}
+
+
+/* =========================================================
+   DOMAIN CARDS
+   ========================================================= */
+
+.domain-card {
+
+    display: flex;
+
+    gap: 20px;
+
+    padding: 22px;
+
+    background: #fafbff;
+
+    border-radius: 18px;
+
+    margin-bottom: 16px;
+
+    border: 1px solid #e5e7f2;
+
+}
+
+
+.domain-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 16px;
+
+    font-size: 30px;
+
+    background: #eef0ff;
+
+}
+
+
+.domain-card h4 {
+
+    font-size: var(--font-h4);
+
+    color: var(--dark);
+
+}
+
+
+.domain-card ul {
+
+    margin-left: 20px;
+
+    margin-top: 8px;
+
+}
+
+
+/* =========================================================
+   APPLICATIONS
+   ========================================================= */
+
+.application-section {
+
+    margin-bottom: 30px;
+
+}
+
+
+.application-section h4 {
+
+    color: var(--primary);
+
+    font-size: var(--font-h4);
+
+    margin-bottom: 15px;
+
+}
+
+
+.mini-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 15px;
+
+}
+
+
+.mini-grid div {
+
+    background: #f8f9ff;
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+}
+
+
+.tag-container {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.tag-container span,
+.problem-tags span,
+.value-list span {
+
+    padding: 9px 14px;
+
+    border-radius: 30px;
+
+    background: #eef0ff;
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    font-size: var(--font-small);
+
+}
+
+
+/* =========================================================
+   CONCERNS
+   ========================================================= */
+
+.concern-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 15px;
+
+}
+
+
+.concern-card {
+
+    padding: 22px;
+
+    background: #fafbff;
+
+    border-radius: 18px;
+
+    border-top: 4px solid var(--red);
+
+    transition: .3s;
+
+}
+
+
+.concern-card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+.concern-card span {
+
+    font-size: 30px;
+
+}
+
+
+.concern-card h4 {
+
+    margin: 8px 0;
+
+}
+
+
+/* =========================================================
+   ETHICS
+   ========================================================= */
+
+.ethics-intro {
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #eaf8f3,
+        #effbff
+    );
+
+    margin-bottom: 20px;
+
+}
+
+
+.big-emoji {
+
+    font-size: 55px;
+
+}
+
+
+.ethics-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 15px;
+
+}
+
+
+.ethics-grid div {
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    background: #fafbff;
+
+}
+
+
+.ethics-grid b {
+
+    color: var(--primary);
+
+}
+
+
+/* =========================================================
+   FRAMEWORK
+   ========================================================= */
+
+.framework-card {
+
+    padding: 25px;
+
+    background: #fafbff;
+
+    border-radius: 18px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.framework-card h4 {
+
+    font-size: var(--font-h4);
+
+    color: var(--primary);
+
+}
+
+
+.highlight {
+
+    margin-top: 15px;
+
+    padding: 15px;
+
+    background: #fff7e8;
+
+    border-radius: 12px;
+
+}
+
+
+.value-list {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================================================
+   BIOETHICS
+   ========================================================= */
+
+.pillar-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 15px;
+
+}
+
+
+.pillar {
+
+    text-align: center;
+
+    padding: 25px 15px;
+
+    background: #fafbff;
+
+    border-radius: 18px;
+
+}
+
+
+.pillar span {
+
+    font-size: 38px;
+
+}
+
+
+.pillar h4 {
+
+    margin: 10px 0;
+
+    color: var(--primary);
+
+}
+
+
+/* =========================================================
+   CASE STUDY
+   ========================================================= */
+
+.case-introduction {
+
+    display: flex;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #edf0ff,
+        #e8faff
+    );
+
+    border-radius: 20px;
+
+}
+
+
+.case-introduction > span {
+
+    font-size: 50px;
+
+}
+
+
+.case-step {
+
+    padding: 22px;
+
+    margin-top: 18px;
+
+    border-radius: 18px;
+
+    background: #fafbff;
+
+}
+
+
+.case-step h4 {
+
+    color: var(--primary);
+
+    margin-bottom: 10px;
+
+}
+
+
+.reason-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 12px;
+
+    margin-top: 15px;
+
+}
+
+
+.reason-grid div {
+
+    padding: 16px;
+
+    background: white;
+
+    border-radius: 14px;
+
+}
+
+
+.problem-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 10px;
+
+}
+
+
+.problem-tags span {
+
+    background: #ffecef;
+
+    color: #d83d61;
+
+}
+
+
+/* =========================================================
+   BIOETHICS SOLUTION
+   ========================================================= */
+
+.bioethics-solution {
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background: #f5f8ff;
+
+}
+
+
+.bioethics-solution > h4 {
+
+    font-size: var(--font-h4);
+
+    color: var(--primary);
+
+    margin-bottom: 15px;
+
+}
+
+
+.solution {
+
+    display: flex;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    margin: 12px 0;
+
+    background: white;
+
+    border-radius: 15px;
+
+}
+
+
+.solution-icon {
+
+    font-size: 30px;
+
+}
+
+
+.solution h5 {
+
+    font-size: 17px;
+
+    color: var(--dark);
+
+}
+
+
+.solution ul {
+
+    margin-left: 20px;
+
+}
+
+
+.proposed-solution {
+
+    margin-top: 20px;
+
+    padding: 22px;
+
+    background: #eaf8f1;
+
+    border-radius: 18px;
+
+}
+
+
+.proposed-solution h4 {
+
+    color: var(--green);
+
+}
+
+
+.solution-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 12px;
+
+}
+
+
+.solution-list span {
+
+    padding: 10px 14px;
+
+    background: white;
+
+    border-radius: 30px;
+
+}
+
+
+/* =========================================================
+   UNDERSTOOD BUTTON
+   ========================================================= */
+
+.understood-btn {
+
+    display: block;
+
+    margin: 28px auto 0;
+
+    padding: 13px 23px;
+
+    border: 2px solid var(--primary);
+
+    border-radius: 50px;
+
+    background: white;
+
+    color: var(--primary);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+
+.understood-btn:hover {
+
+    background: var(--primary);
+
+    color: white;
+
+    transform: scale(1.04);
+
+}
+
+
+.understood-btn.completed {
+
+    background: var(--green);
+
+    border-color: var(--green);
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   REVISION
+   ========================================================= */
+
+.revision-section {
+
+    margin-top: 70px;
+
+    padding: 45px 30px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #171b3b,
+        #30276c
+    );
+
+    color: white;
+
+}
+
+
+.revision-section .section-heading h2 {
+
+    color: white;
+
+}
+
+
+.revision-section .section-heading p {
+
+    color: #c9cbea;
+
+}
+
+
+.revision-flow {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.revision-flow > div:not(.flow-arrow) {
+
+    text-align: center;
+
+    width: 130px;
+
+}
+
+
+.revision-flow span {
+
+    display: flex;
+
+    width: 45px;
+
+    height: 45px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: auto auto 8px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.15);
+
+}
+
+
+.revision-flow b {
+
+    display: block;
+
+}
+
+
+.revision-flow small {
+
+    color: #cdd0ee;
+
+}
+
+
+.flow-arrow {
+
+    font-size: 25px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 45px 20px;
+
+    background: #0e1128;
+
+    color: white;
+
+}
+
+
+footer p {
+
+    color: #b9bdd9;
+
+}
+
+
+footer span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: #777c9e;
+
+    font-size: var(--font-small);
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media(max-width: 850px) {
+
+    .header-content {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .progress-box {
+
+        width: 100%;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .question-grid,
+    .pillar-grid {
+
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+
+    .mini-grid,
+    .concern-grid,
+    .reason-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .ethics-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media(max-width: 600px) {
+
+    .hero {
+
+        min-height: 420px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .topic-header {
+
+        padding: 18px;
+
+        gap: 12px;
+
+    }
+
+
+    .topic-number {
+
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 13px;
+
+    }
+
+
+    .topic-icon {
+
+        font-size: 25px;
+
+    }
+
+
+    .topic-title h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .topic-title p {
+
+        display: none;
+
+    }
+
+
+    .topic-content {
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+    }
+
+
+    .topic-card.active .topic-content {
+
+        padding-left: 18px;
+
+        padding-right: 18px;
+
+    }
+
+
+    .question-grid,
+    .pillar-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .domain-card {
+
+        flex-direction: column;
+
+    }
+
+
+    .case-introduction {
+
+        flex-direction: column;
+
+    }
+
+
+    .revision-flow {
+
+        flex-direction: column;
+
+    }
+
+
+    .flow-arrow {
+
+        transform: rotate(90deg);
+
+    }
+
+}
