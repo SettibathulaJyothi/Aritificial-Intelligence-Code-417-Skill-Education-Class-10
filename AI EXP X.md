@@ -1,12 +1,12 @@
-quick draw: https://quickdraw.withgoogle.com/
+Quick draw: https://quickdraw.withgoogle.com/
 
-num gusser:https://numguessr.netlify.app/
+Num gusser:https://numguessr.netlify.app/
 
-autodraw:https://www.autodraw.com/
+Autodraw:https://www.autodraw.com/
 
-teachable machine: https://teachablemachine.withgoogle.com/
+Teachable machine: https://teachablemachine.withgoogle.com/
 
-tixtactoe:https://playtictactoe.org/
+Tixtactoe:https://playtictactoe.org/
 
 https://ncase.me/loopy/
 
@@ -20,8 +20,8 @@ https://trends.google.com/trends/?geo=IN(Google%20trends)
 
 GAN: https://gandissect.csail.mit.edu/
 
-genAI: https://www.artbreeder.com/
+GenAI: https://www.artbreeder.com/
 
-rumway ML: https://runway.com/
+Rumway ML: https://runway.com/
 
 AI generated images: https://britannicaeducation.com/blog/quiz-real-or-ai/
