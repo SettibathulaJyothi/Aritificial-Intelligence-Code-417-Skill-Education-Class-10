@@ -12,3 +12,5 @@
   1. pg-88
   2. pg-87
   3. pg-88
+## C. Competency-based/Application-based questions.
+Do it yourself
